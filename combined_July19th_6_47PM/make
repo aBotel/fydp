@@ -1,0 +1,23 @@
+CC=g++
+CPPFLAGS=-Wall
+CFLAGS=-c -Wall
+CSOURCES=ADXL345.c
+CPPSOURCES=mcp3008Spi.cpp mcp3008SpiTest.cpp
+HEADERS=mcp3008Spi.h
+OUT_EXE=test_out
+
+all: test  
+
+test: csources cppsources
+	$(CC) -o %.o test_exe
+
+csources: $(CSOURCES)
+	$(CC) $(CFLAGS) -o 
+
+cppsources: $(CPPSOURCES)
+	$(CC) $(CPPFLAGS) -o 
+
+clean: 
+	rm -rf *o
+
+
